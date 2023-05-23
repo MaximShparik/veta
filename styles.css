@@ -105,6 +105,10 @@ ul {
   margin-bottom: 0;
 }
 
+span {
+  font-size: 20px;
+  color: dodgerblue;
+}
 .links {
   display: flex;
   flex-direction: column;

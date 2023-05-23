@@ -18,16 +18,14 @@ function rate (text) {
 
 searchButton.addEventListener('click', function() {
     var percent = rate(searchInput.value)
-    if (!percent) {
+    if (percent === false) {
         resultsContainer.innerHTML = '<p>Мы ещё не можем обработать такой запрос</p>'
     } else {
-        var resultsHTML = '<p>Достоверность данной ифнормации составляет: ' + percent + '%<br>Ниже приведён список ссылок подверждиющих процент достоверности</p>'
+        var resultsHTML = '<p>Достоверность данной информации составляет: <span>' + percent + '%</span><br>Ниже приведён список ссылок, подтверждающих процент достоверности</p>'
         resultsHTML += `<div class="links">
-                            <a href="http://kremlin.ru/events/president/news/71104/videos" target="_blank" rel="noopener noreferrer">http://kremlin.ru/events/president/news/71104/videos</a>
-                            <a href="http://kremlin.ru/events/president/news/71105/videos" target="_blank" rel="noopener noreferrer">http://kremlin.ru/events/president/news/71105/videos</a>
-                            <a href="http://kremlin.ru/events/president/news/71105/videos" target="_blank" rel="noopener noreferrer">http://kremlin.ru/events/president/news/71105/videos</a>
-                            <a href="http://kremlin.ru/" target="_blank" rel="noopener noreferrer">http://kremlin.ru/</a>
-                            <a href="http://kremlin.ru/events/president/news/71016/videos" target="_blank" rel="noopener noreferrer">http://kremlin.ru/events/president/news/71016/videos</a>
+                            ${percent == 100 ? '<a href=" http://www.kremlin.ru/structure/president/presidents" target="_blank" rel="noopener noreferrer"> http://www.kremlin.ru/structure/president/presidents</a>' : ''}
+                            ${percent === 0 ? '<a href="https://encyclopedia.mil.ru/encyclopedia/history_department/more.htm?id=11344854@SD_Employee" target="_blank" rel="noopener noreferrer">https://encyclopedia.mil.ru/encyclopedia/history_department/more.htm?id=11344854@SD_Employee</a>' : ''}
+                            ${percent == 33 ? '<a href="https://amp.rbc.ru/rbcnews/politics/11/02/2023/63e729f69a794760e4f763b9" target="_blank" rel="noopener noreferrer">https://amp.rbc.ru/rbcnews/politics/11/02/2023/63e729f69a794760e4f763b9</a>' : ''}
                         </div>`
 
         resultsContainer.innerHTML = resultsHTML;
