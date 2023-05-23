@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИСТОРИЯ.AI</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="http://kremlin.ru/" target="_blank" rel="noopener noreferrer">ИСТОРИЯ.AI - что это</a>
+            <a href="http://kremlin.ru/" target="_blank" rel="noopener noreferrer">Поддержка</a>
+            <a href="http://kremlin.ru/" target="_blank" rel="noopener noreferrer">Сотрудничество</a>
+        </nav>
+    </header>
+    <section>
+        <div class="container">
+            <h1>ИСТОРИЯ.AI: Проверка информации в одно касание</h1>
+            <p>Добро пожаловать на ИСТОРИЯ.AI - инструмент, который позволяет вам быстро и удобно проверить любую информацию: текст, видео, аудио и другие ресерсы. Наш сервис обработает ваш запрос и предоставит вам точные данные о предоставленной информации.</p>
+            <p>Просто введите текст, вставьте ссылку или загрузите файол, и наш ИИ выполнит всеобъемлющую проверку.</p>
+            <div class="search-container">
+                <textarea type="text" id="searchInput" placeholder="Введите текст или ссылку"></textarea>
+                <div class="action">
+                    <button id="searchButton">Проверить</button>
+                    <button id="loadButton">Загрузить файл</button>
+                </div>
+            </div>
+            <div id="resultsContainer">
+            </div>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
